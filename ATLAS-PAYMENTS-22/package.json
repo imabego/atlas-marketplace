@@ -1,12 +1,15 @@
 {
   "name": "atlas-marketplace",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "ATLAS marketplace prototype with sandbox payments",
+  "description": "ATLAS marketplace with PostgreSQL persistence and sandbox payments",
   "scripts": {
     "start": "node server.js"
   },
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
   }
 }
