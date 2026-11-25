@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ATLAS — A World Without Limits. Découvre une nouvelle expérience shopping.">
+<meta name="theme-color" content="#090d18">
+<title>ATLAS — A World Without Limits</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">ATLAS<span>.</span></a>
+  <nav><a href="#shop">Boutique</a><a href="#seller">Vendre</a><a href="#orders">Commandes</a></nav>
+  <div class="top-actions"><button class="ghost" id="accountBtn">Connexion</button><button class="cart-btn" id="cartBtn">Panier <b id="cartCount">0</b></button></div>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy"><p class="eyebrow">A WORLD WITHOUT LIMITS</p><h1>Le monde à portée<br><em>de clic.</em></h1><p>Découvre des produits, lance ta boutique et fais partie d'un commerce sans frontières.</p><a class="primary" href="#shop">Explorer la boutique <span>↗</span></a><div class="hero-note">UN MARCHÉ. DES POSSIBILITÉS INFINIES.</div></div>
+  <div class="hero-art"><div class="orb"></div><div class="hero-card"><span>ATLAS / 001</span><strong>DISCOVER<br>WHAT'S NEXT.</strong><small>SHOP THE FUTURE</small></div><div class="floating-tag">GLOBAL<br>MARKETPLACE</div></div>
+</section>
+<section class="section" id="shop">
+  <div class="section-head"><div><p class="eyebrow">SÉLECTION ATLAS</p><h2>À découvrir</h2></div><input id="search" placeholder="Rechercher un produit…"></div>
+  <div id="products" class="products-grid"><p>Chargement des produits…</p></div>
+</section>
+<section class="seller-banner" id="seller"><div><p class="eyebrow">TON PROCHAIN DÉPART</p><h2>Ta boutique.<br>Ton univers.</h2><p>Crée ton espace vendeur et présente tes produits à la communauté ATLAS.</p></div><button class="primary" id="sellerBtn">Devenir vendeur ↗</button></section>
+<section class="section lower" id="orders"><div class="section-head"><div><p class="eyebrow">TON ACTIVITÉ</p><h2>Mes commandes</h2></div><button class="ghost" id="loadOrders">Actualiser</button></div><div id="ordersList" class="orders-list">Connecte-toi pour consulter tes commandes.</div></section>
+</main>
+<footer><a class="brand" href="/">ATLAS<span>.</span></a><span>A WORLD WITHOUT LIMITS</span><span>© ATLAS — Démo</span></footer>
+
+<dialog id="authDialog"><form method="dialog" class="dialog-card"><button class="close" aria-label="Fermer">×</button><p class="eyebrow">ESPACE CLIENT</p><h2 id="authTitle">Connexion</h2><div id="nameWrap" hidden><label>Nom<input id="authName" autocomplete="name"></label></div><label>E-mail<input id="authEmail" type="email" autocomplete="email" required></label><label>Mot de passe<input id="authPassword" type="password" minlength="8" autocomplete="current-password" required></label><button class="primary full" id="authSubmit" type="button">Se connecter</button><p id="authMessage" class="message"></p><button class="text-btn" type="button" id="toggleAuth">Créer un compte</button></form></dialog>
+
+<dialog id="cartDialog"><div class="dialog-card"><button class="close" data-close="cartDialog">×</button><p class="eyebrow">TON PANIER</p><h2>Ma sélection</h2><div id="cartItems"></div><div class="cart-total"><b>Total</b><strong id="cartTotal">0,00 €</strong></div><button class="primary full" id="checkoutBtn">Continuer vers le paiement</button><p id="checkoutMessage" class="message"></p></div></dialog>
+
+<dialog id="paymentDialog"><div class="dialog-card"><button class="close" data-close="paymentDialog">×</button><p class="eyebrow">ATLAS PAYMENTS · SANDBOX</p><h2>Finaliser la commande</h2><div class="payment-total"><span>Total de la commande</span><strong id="paymentOrderTotal">0,00 €</strong></div><label>Moyen de paiement<select id="paymentMethod"><option value="orange_money">Orange Money</option><option value="airtel_money">Airtel Money</option><option value="mpesa">M-Pesa</option><option value="card">Carte bancaire (test)</option></select></label><p class="sandbox-note">Mode démonstration : aucun transfert d'argent réel. Ne saisis aucun numéro de carte, code PIN ou mot de passe de paiement.</p><p class="reference">Référence : <strong id="paymentReference">En attente de création</strong></p><p id="paymentStatus" class="payment-status">TRANSACTION NON CONFIRMÉE</p><button class="primary full" id="paymentStart" type="button">Créer la transaction de test</button><button class="primary full" id="paymentSimulate" type="button" hidden>Simuler le paiement réussi</button><p id="paymentMessage" class="message"></p></div></dialog>
+
+<dialog id="sellerDialog"><form method="dialog" class="dialog-card"><button class="close" data-close="sellerDialog">×</button><p class="eyebrow">ESPACE VENDEUR</p><h2>Ma boutique ATLAS</h2><div id="sellerContent"></div></form></dialog>
+<script src="/app.js"></script>
+</body></html>
